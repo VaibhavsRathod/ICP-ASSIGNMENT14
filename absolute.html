@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Absolute Page</title>
 
     <style>
-        .box{
-            height: 400px;
-            width: 450px;
-            background-color: rgb(105, 123, 123);
-            position: relative;
-            
-        }
+      .box {
+        height: 450px;
+        width: 450px;
+        padding-top: 12px;
+        background-color: rgb(105, 123, 123);
+        border: 2px dotted rgb(37, 40, 40);
+        border-radius: 20px;
+      }
+      .block {
+        padding:59px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 50px;
+      }
+
+      .user-image{
+        position: absolute;
+        top: -2px;
+        right: 210px;
+        height: 45px;
+      }
+
+      button {
+        position: relative;
+        border-radius: 8px;
+        background-color: rgb(184, 234, 234);
+        padding: 8px;
+        margin: 30px;
+        right: -140px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box">
-    <form action="">
-        <div class="block1">
-        <label for="">Enter Email:</label>
-        <input type="email" required placeholder="Enter Your Email">
-    </div>
+      <form action="">
+        <div class="block">
 
-        <div class="block2">
-        <label for="">Enter Password:</label>
-        <input type="password" required placeholder="Enter Password">
-    </div>
+            <img src="img/logo/user.png" class="user-image"> <br>
 
-    <button>
-        Login Now
-    </button>
-    </form>
-</div>
-</body>
+          <label for="">Enter Email:</label>
+          <input type="email" required placeholder="Enter Your Email" /><br /><br>
+
+          <label for="">Enter Password:</label>
+          <input type="password" required placeholder="Enter Password" />
+        </div>
+
+        <button>Login Now</button>
+      </form>
+    </div>
+  </body>
 </html>
